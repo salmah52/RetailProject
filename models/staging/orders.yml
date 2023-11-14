@@ -1,0 +1,10 @@
+version: 2
+
+
+sources:
+  - name: Online_Retail009
+    database: fleet-space-403010
+    schema: Online_Retail009
+    tables:
+      - name: country
+      - name : mainretail09

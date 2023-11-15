@@ -57,16 +57,7 @@ SQL comments and YAML files provide documentation for each transformation step, 
 
 dbt allows for the creation of metrics to measure the impact and effectiveness of your transformations.
 
-### Setting Up
-
-#### Setting Up the Project
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/salmah52/dbtRetailProject.git
-
-## Setting Up
+## Setting Up the projects
 
 1. Clone the repository: `git clone https://github.com/salmah52/dbtRetailProject.git`
 2. Install dbt: `pip install dbt`

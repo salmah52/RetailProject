@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Customer dimension table containing unique customers and their associated country."
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+        description: "Surrogate key for the customer dimension."
+        meta:
+          dbt_utils:
+            surrogate_key: true
+      - name: country
+        tests:
+          - not_null
+        description: "Country of the customer."
+

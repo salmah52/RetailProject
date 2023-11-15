@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: "Datetime dimension table containing unique datetime values with extracted components."
+    columns:
+      - name: datetime_id
+        tests:
+          - not_null
+          - unique
+        description: "Surrogate key for the datetime dimension-  Distinct datetime IDs extracted from InvoiceDate."
+        meta:
+          dbt_utils:
+            surrogate_key: true
+    
+      - name: year
+        description: Year extracted from datetime_id
+      - name: month
+        description: Month extracted from datetime_id
+      - name: day
+        description: Day extracted from datetime_id
+      - name: hour
+        description: Hour extracted from datetime_id
+      - name: minute
+        description: Minute extracted from datetime_id
+      - name: weekday
+        description: Day of the week extracted from datetime_id
+      - name: weekday2
+        description: Formatted day of the week (full name) extracted from datetime_id
+      - name: quarter
+        description: Quarter extracted from datetime_id
+      - name: week_number
+        description: Week number extracted from datetime_id
+      - name: weekday_weekend
+        description: Categorized as 'Weekend' or 'Weekday' based on the day of the week
+      - name: holiday
+        description: Categorized as 'Holiday' or 'Non-Holiday' based on specific conditions
+      - name: leap_year
+        description: Categorized as 'Leap Year' or 'Non-Leap Year' based on leap year conditions
+      - name: season
+        description: Season categorization based on the month extracted from datetime_id

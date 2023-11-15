@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fact_invoices
+    description: "Invoice fact table containing information about each invoice, including products, customers, quantities, and totals."
+    columns:
+      - name: invoice_id
+        tests:
+          - not_null
+          - unique
+        description: "Surrogate key for the invoice fact table."
+        meta:
+          dbt_utils:
+            surrogate_key: true
+      - name: datetime_id
+        tests:
+          - not_null
+        description: "Foreign key referencing datetime dimension."
+      - name: product_id
+        tests:
+          - not_null
+        description: "Foreign key referencing product dimension."
+      - name: customer_id
+        tests:
+          - not_null
+        description: "Foreign key referencing customer dimension."
+      - name: quantity
+        tests:
+          - not_null
+        description: "Quantity of the product in the invoice."
+      - name: total
+        tests:
+          - not_null
+        description: "Total amount for the product in the invoice."

@@ -8,5 +8,6 @@ SELECT DISTINCT
     UnitPrice AS price
      FROM {{ source('Online_Retail009', 'mainretail09') }}
 
+
 WHERE StockCode IS NOT NULL
 AND UnitPrice > 0

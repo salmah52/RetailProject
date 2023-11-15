@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "Product dimension table containing unique products with associated stock code, description, and price."
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+        description: "Surrogate key for the product dimension."
+        meta:
+          dbt_utils:
+            surrogate_key: true
+      - name: stock_code
+        tests:
+          - not_null
+        description: "Stock code of the product."
+      - name: description
+        tests:
+          - not_null
+        description: "Description of the product."
+      - name: price
+        tests:
+          - not_null
+        description: "Unit price of the product."

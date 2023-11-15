@@ -6,11 +6,14 @@ Try running the following commands:
 - `dbt run`
 - `dbt test`
 
-## dbt Retail Project
+
+## dbt - Data Transformation
 
 ### Overview
 
-This dbt (data build tool) project focuses on transforming and analyzing retail data sourced from the Online Retail dataset. It includes the creation of dimension and fact tables, schema checks, and tests to ensure data quality.
+dbt (data build tool) simplifies the process of transforming data by allowing users to write SQL queries to transform raw data into meaningful insights. This project focuses on transforming and analyzing retail data sourced from the Online Retail dataset. It includes the creation of dimension and fact tables, schema checks, and tests to ensure data quality.
+
+
 
 ### Dataset
 
@@ -41,24 +44,10 @@ The `models` directory contains SQL files defining the transformation logic for 
 
 #### Tests
 
-The `tests` directory includes YAML files defining checks for data quality.
+The `tests` directory includes YAML files defining checks for data quality.The project includes tests to ensure the quality of the transformed data. Tests include schema checks, uniqueness checks, and null value checks.
 
 - `dim_customer.yml`: Defines schema checks and tests for uniqueness and null values in the `dim_customer` table.
 - Other YAML files for additional tests.
-
-#### Documentation
-
-Each SQL file includes comments explaining the transformation logic. Additionally, there are YAML files providing descriptions and tests for the tables.
-
-### dbt - Data Transformation
-
-#### Transformation
-
-dbt simplifies the process of transforming data by allowing users to write SQL queries to transform raw data into meaningful insights.
-
-#### Testing
-
-The project includes tests to ensure the quality of the transformed data. Tests include schema checks, uniqueness checks, and null value checks.
 
 #### Documentation
 
